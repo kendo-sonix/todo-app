@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.todo"
-    compileSdk = 34
+    compileSdk = 35 // 35にしないとビルドできない
 
     defaultConfig {
         applicationId = "com.example.todo"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -66,4 +66,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    // navigation
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
 }
